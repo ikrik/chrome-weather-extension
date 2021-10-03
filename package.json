@@ -1,0 +1,64 @@
+{
+  "name": "chrome-weather-extension",
+  "version": "1.0.0",
+  "description": "React Weather Extension",
+  "private": "true",
+  "scripts": {
+    "start": "webpack --watch --progress --config webpack.dev.js",
+    "build": "webpack --watch --progress --config webpack.prod.js",
+    "lint": "eslint -c .eslintrc.js --color --max-warnings 0 --ext .tsx,.ts,.jsx,.js --fix"
+  },
+  "author": "Krik Tsakmatzian",
+  "keywords": [
+    "react",
+    "typescript",
+    "chrome",
+    "weather-extension"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:ikrik/chrome-weather-extension.git"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "i18next": "~21.2.3",
+    "i18next-intervalplural-postprocessor":"^3.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-i18next": "~11.12.0"
+  },
+  "devDependencies": {    
+    "@types/chrome": "^0.0.158",
+    "@types/i18next": "~13.0.0",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.3.0",
+    "eslint-config-airbnb": "~18.2.1",
+    "eslint-config-prettier": "~8.3.0",
+    "eslint-import-resolver-typescript": "~2.4.0",
+    "eslint-plugin-enforce-ids-in-jsx": "^1.0.0",
+    "eslint-plugin-json": "~2.1.2",
+    "eslint-plugin-no-relative-import-paths": "~1.0.8",
+    "eslint-plugin-prettier": "~3.1.4",
+    "fontsource-roboto": "^4.0.0",
+    "html-webpack-plugin": "^5.3.2",
+    "husky": "~7.0.2",    
+    "pretty-quick": "~3.1.1",
+    "prettier": "~2.4.1",
+    "style-loader": "^3.3.0",
+    "terser-webpack-plugin": "^5.2.4",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.2.4",
+    "webpack": "^5.56.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn lint ./src/"
+    }
+  }
+}
