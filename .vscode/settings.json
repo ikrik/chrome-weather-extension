@@ -1,0 +1,25 @@
+{
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "prettier.enable": true,
+  "editor.autoClosingBrackets": "always",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.eslint.fixAll": true
+  },
+  "editor.formatOnSave": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 5,
+  "workbench.editor.openPositioning": "first",  
+  "workbench.editor.untitled.labelFormat": "content"  
+}
