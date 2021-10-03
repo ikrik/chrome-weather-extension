@@ -1,16 +1,13 @@
-const path = require('path');
-
 module.exports = {
   env: {
     browser: true,
     commonjs: true,
     es6: true,
-    node: true
+    node: true,
   },
   extends: [
     'airbnb',
     'airbnb/hooks',
-    'react-app',
     'eslint:recommended',
     'plugin:import/errors',
     'plugin:react/recommended',
@@ -28,11 +25,13 @@ module.exports = {
     'react',
     'react-hooks',
     '@typescript-eslint',
-    'testing-library',
   ],
   rules: {
+    'camelcase': [0, { properties : 'never' }],
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
     'no-relative-import-paths/no-relative-import-paths': [
-      'warn',
+      'off',
       {
         allowSameFolder: true,
       },
@@ -92,7 +91,7 @@ module.exports = {
     'no-restricted-imports': [
       'error',
       {
-        patterns: ['@material-ui/*/*/*', '!@material-ui/core/test-utils/*']        
+        patterns: ['@material-ui/*/*/*', '!@material-ui/core/test-utils/*'],  
       },
     ],
   },
